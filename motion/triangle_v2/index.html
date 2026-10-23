@@ -1,0 +1,132 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>*{margin:0;padding:0}html,body{overflow:hidden;background:#000}canvas{display:block}</style></head>
+<body><canvas id="out"></canvas>
+<script>window.KCONF={W:1080,H:1920,FPS:30,SAMPLES:6,
+  palette:{ink:[44,34,74],paper:[255,247,232],accent:[255,107,90],accentHi:[255,160,140],warm:[255,205,70],deep:[120,60,140],shade:[70,50,110],mute:[190,180,200],gray:[110,100,130],cool:[90,170,235]},
+  fonts:{serif:'"Inter"',sans:'"Inter"',mono:'"Inter"'},
+  caBase:0.6, caHit:7, flash:.18, punch:.035, vignette:.12};</script>
+<script src="engine.js"></script>
+<script>
+const {ink:INK,paper:PAPER,accent:ACC,accentHi:ACCHI,warm:SUN,deep:DEEP,cool:SKY}=PAL;
+const MUTE=PAL.mute;const MINT=[120,214,176], PINK=[255,160,200];
+const F=(w,s)=>`${w} ${s}px "Inter"`;
+const IM={};
+const loadImgs=Promise.all([1,3,4,5,6].map(k=>new Promise(r=>{const i=new Image();i.onload=()=>r();i.src=`img/triangle_${k}.jpg`;IM[k]=i;})));
+const fonts=Promise.all(['900 100px "Inter"','800 40px "Inter"'].map(f=>document.fonts.load(f,'ÄÖäö')));
+
+/* cover-fit photo inside rect x,y,w,h with float zoom/pan (sub-pixel smooth) */
+function photo(g,k,x,y,w,h,zoom=1,px=0,py=0){const im=IM[k],s=Math.max(w/im.width,h/im.height)*zoom,dw=im.width*s,dh=im.height*s;
+  g.save();g.beginPath();g.rect(x,y,w,h);g.clip();g.imageSmoothingQuality='high';
+  g.drawImage(im,x+(w-dw)/2+px*(dw-w)/2,y+(h-dh)/2+py*(dh-h)/2,dw,dh);g.restore()}
+function rr(g,x,y,w,h,r){g.beginPath();g.roundRect(x,y,w,h,r)}
+/* big stamped word, letters pop in staggered, auto-fit width */
+function big(g,str,cx,cy,col,u,o={}){const fit=o.fit||940,max=o.size||320;let size=max;const L0=lay(str,F(900,100));size=Math.min(max,100*fit/L0.w);
+  const font=F(900,size),L=lay(str,font),x0=cx-L.w/2;g.save();g.font=font;g.textAlign='center';g.textBaseline='alphabetic';
+  L.gl.forEach((q,j)=>{const a=P(u,j*(o.gap??.04),.3);if(a<=0)return;const s=1+ (o.k??.9)*(1-ex(a));const x=x0+q.x+q.w/2;
+    g.save();g.translate(x,cy);g.rotate((1-ex(a))*(o.rot??.12)*(j%2?1:-1));g.scale(s,s);g.fillStyle=rgb(col,Math.min(1,a*3));g.fillText(q.ch,0,size*.36);g.restore()});g.restore();return size}
+const tri=(cx,top,h,hw)=>[[cx,top],[cx-hw,top+h],[cx+hw,top+h],[cx,top]];
+function confetti(g,t,n,seed,cols,y0=-100,sp=380){const r=rng(seed);for(let i=0;i<n;i++){const x=r()*W,ph=r()*H,v=sp*(.6+r()),sz=18+r()*34,c=cols[i%cols.length],rot=r()*6+t*(1+r()*3);
+  const y=((ph+t*v)%(H+200))-100;g.save();g.translate(x,y);g.rotate(rot);g.fillStyle=rgb(c);rr(g,-sz/2,-sz*.18,sz,sz*.36,6);g.fill();g.restore()}}
+
+/* ---------- 1–3: strobe words ---------- */
+const word3=(txt,bg,fg,mark)=>(g,t,u)=>{fillAll(g,bg);
+  const e=ex(P(u,0,.18));
+  g.save();g.translate(CX,CY);g.scale(1+.06*u*2,1+.06*u*2);g.translate(-CX,-CY);
+  // sweeping stripes
+  for(let i=0;i<7;i++){g.fillStyle=rgb(mark,.16);g.save();g.translate(0,i*330-300+(u*900)%330);g.rotate(-.12);g.fillRect(-200,0,W+400,90);g.restore()}
+  big(g,txt,CX,CY,fg,u,{size:340,gap:.035});
+  g.restore()};
+
+/* ---------- 4: hero photo ---------- */
+const sHero=(g,t,u)=>{fillAll(g,SUN);
+  const R=lp(0,1500,ex(P(u,0,.55)));
+  g.save();g.beginPath();g.arc(CX,CY+60,R,0,TAU);g.clip();
+  photo(g,3,0,0,W,H,lp(1.0,1.28,eio(P(u,0,2.5))),lp(-.1,.18,eio(P(u,0,2.5))),.05);
+  // dark gradient bottom for text
+  const gr=g.createLinearGradient(0,H*.55,0,H);gr.addColorStop(0,'rgba(44,34,74,0)');gr.addColorStop(1,'rgba(44,34,74,.78)');g.fillStyle=gr;g.fillRect(0,H*.55,W,H*.45);g.restore();
+  // ring accent
+  ring(g,CX,CY+60,R+14,PAPER,.9*(1-P(u,.5,.3)),10);
+  // triangle drawn on
+  const pts=tri(CX,230,300,190),p=ex(P(u,.35,.9));
+  g.save();g.lineCap='round';g.lineJoin='round';drawOn(g,pts,p,PAPER,22,1);
+  for(let k=1;k<=5;k++){const yy=230+k*50,hwk=190*k*50/300;drawOn(g,[[CX-hwk,yy],[CX+hwk,yy]],ex(P(u,.7+k*.06,.3)),SUN,9,1)}
+  g.restore();
+  // title
+  const a=ex(P(u,.7,.5));g.save();g.beginPath();g.rect(0,1380,W,380);g.clip();
+  T(g,'Kiipeilykolmio',F(900,128),CX,1480+(1-a)*160,PAPER,1);
+  T(g,'luiskalla',F(900,128),CX,1620+(1-ex(P(u,.85,.5)))*180,SUN,1);g.restore();
+  const tp=P(u,1.4,.8);T(g,typed('Montessori-henkinen kiipeily kotona',tp),F(700,46),CX,1710,PAPER,tp>0?1:0)};
+
+/* ---------- 5: rungs ---------- */
+const sRungs=(g,t,u)=>{fillAll(g,MINT);
+  const e=ex(P(u,0,.45));
+  g.save();g.beginPath();g.moveTo(0,0);g.lineTo(W,0);g.lineTo(W,900-(1-e)*900+0);g.lineTo(0,1060-(1-e)*1060);g.closePath();g.clip();
+  photo(g,5,0,0,W,1100,lp(1.05,1.3,eio(P(u,0,2))),lp(.25,-.15,eio(P(u,0,2))),0);g.restore();
+  const n=Math.min(8,1+Math.floor(P(u,.15,.9)*8));
+  g.save();g.translate(0,0);big(g,String(n),230,1330,INK,u-.0,{size:620,fit:400,gap:0,k:.5,rot:.05});g.restore();
+  big(g,'TANKOA',700,1230,INK,u-.35,{size:150,fit:560,gap:.04});
+  T(g,'joka puolella',F(800,70),700,1330,INK,ex(P(u,.55,.4)));
+  for(let i=0;i<8;i++){const q=stg(u,i,.055,.35),c=[ACC,SUN,SKY,PINK,DEEP,ACC,SUN,SKY][i];g.fillStyle=rgb(c);rr(g,60,1520+i*42,(W-120)*q,26,13);g.fill()}
+  T(g,'Ote ja jalkavoima kehittyvät',F(800,46),CX,1880,INK,ex(P(u,1.0,.4)))};
+
+/* ---------- 6: slopes ---------- */
+const sSlope=(g,t,u)=>{fillAll(g,SUN);
+  const sl=spr(P(u,0,.6),6,10);
+  g.save();g.translate(CX,620);g.rotate(lp(-.35,-.05,sl));g.translate(0,(1-ex(P(u,0,.4)))*-800);
+  g.shadowColor='rgba(44,34,74,.3)';g.shadowBlur=40;g.shadowOffsetY=24;g.fillStyle='#fff';rr(g,-450,-450,900,900,56);g.fill();g.shadowColor='transparent';
+  g.save();rr(g,-450,-450,900,900,56);g.clip();photo(g,6,-450,-450,900,900,lp(1.0,1.22,eio(P(u,0,2))),0,0);g.restore();g.restore();
+  big(g,'KAKSI',360,1260,INK,u-.4,{size:200,fit:560,gap:.05});
+  big(g,'kaltevuutta',CX,1400,ACC,u-.6,{size:130,fit:900,gap:.03});
+  // two slopes with rolling balls
+  const sl1=[[90,1700],[520,1560]],sl2=[[560,1780],[990,1480]];
+  [[sl1,.9,ACC],[sl2,1.05,DEEP]].forEach(([s,t0,c],i)=>{drawOn(g,s,ex(P(u,t0-.3,.4)),INK,14,1);
+    const q=eio(P(u,t0+.1+i*.1,.8)),x0=s[1][0],y0=s[1][1],x1=s[0][0],y1=s[0][1],bx=lp(x0,x1,q),by=lp(y0,y1,q)-34;
+    if(u>t0){g.save();g.translate(bx,by);g.rotate(-q*18);g.fillStyle=rgb(c);g.beginPath();g.arc(0,0,30,0,TAU);g.fill();g.fillStyle=rgb(PAPER);g.fillRect(-4,-30,8,22);g.restore()}});
+  T(g,"Luiska liu'ulle tai kiipeämiseen",F(800,44),CX,1855,INK,ex(P(u,1.2,.4)))};
+
+/* ---------- 7: folds flat ---------- */
+const sFold=(g,t,u)=>{fillAll(g,INK);
+  blobs(g,t,INK,[SKY,DEEP,MINT],.7);
+  const p=eio(P(u,.35,.9));const ang=lp(.62,1.5,p),L=420,ax=CX,ay=lp(760,980,p)+0,sx=Math.cos(ang)*L,sy=Math.sin(ang)*L;
+  g.save();g.lineCap='round';g.lineJoin='round';
+  const bump=1+.08*Math.sin(P(u,.35,.9)*PI);
+  g.strokeStyle=rgb(SUN);g.lineWidth=46;g.beginPath();g.moveTo(ax,ay);g.lineTo(ax-sx,ay+sy-(sy)*0+0);g.stroke();
+  g.strokeStyle=rgb(ACC);g.beginPath();g.moveTo(ax,ay);g.lineTo(ax+sx,ay+sy);g.stroke();
+  // rungs
+  g.strokeStyle=rgb(PAPER);g.lineWidth=12;for(let k=1;k<6;k++){const f=k/6.5;g.beginPath();g.moveTo(ax-sx*f,ay+sy*f-8*(1-p));g.lineTo(ax-sx*f,ay+sy*f+8*(1-p));g.stroke()}
+  g.fillStyle=rgb(PAPER);g.beginPath();g.arc(ax,ay,34,0,TAU);g.fill();g.restore();
+  big(g,'TAITTUU',CX,330,PAPER,u,{size:260,fit:900,gap:.045});
+  big(g,'litteäksi',CX,520,SUN,u-.25,{size:150,fit:700,gap:.04});
+  const cr=lp(0,300,spr(P(u,.9,.6),6,9));g.save();g.beginPath();g.arc(CX,1450,cr,0,TAU);g.clip();photo(g,4,CX-310,1140,620,620,lp(1.1,1.0,P(u,.9,1)),0,0);g.restore();ring(g,CX,1450,cr+16,PAPER,1,8);
+  T(g,'Pois tieltä leikin jälkeen',F(800,52),CX,1830,PAPER,ex(P(u,1.3,.4)))};
+
+/* ---------- 8: photo grid ---------- */
+const sGrid=(g,t,u)=>{fillAll(g,PAPER);
+  const K=[3,5,6,4],pos=[[0,0],[540,0],[0,960],[540,960]],from=[[-700,0],[700,0],[-700,0],[700,0]];
+  const z=1+.07*eo(P(u,.2,1.8));g.save();g.translate(CX,CY);g.scale(z,z);g.translate(-CX,-CY);
+  K.forEach((k,i)=>{const q=ex(P(u,i*.1,.45)),x=pos[i][0]+from[i][0]*(1-q),y=pos[i][1]+(i<2?-1:1)*600*(1-q);
+    g.save();g.translate(x+270,y+480);g.rotate((1-q)*(i%2?.2:-.2));g.translate(-270,-480);photo(g,k,0,0,540,960,lp(1.15,1.0,eo(P(u,i*.1,1.6))),(i%2?-.2:.2),0);g.restore()});
+  g.restore();
+  const b=ex(P(u,.5,.45));g.save();g.translate(CX,CY);g.rotate(-.1);g.fillStyle=rgb(ACC);g.shadowColor='rgba(44,34,74,.35)';g.shadowBlur=30;g.fillRect(-W*.8*b,-150,W*1.6*b,300);g.shadowColor='transparent';
+  if(b>.5){T(g,'Montessori-henkinen',F(900,96),0,-12,PAPER,1);T(g,'kiipeily kotona',F(900,96),0,92,SUN,1)}g.restore()};
+
+/* ---------- 9: end card ---------- */
+const sEnd=(g,t,u)=>{fillAll(g,INK);blobs(g,t,INK,[DEEP,ACC,SKY],.5+1.6*Math.exp(-4*u));
+  confetti(g,t,26,7,[ACC,SUN,MINT,SKY,PINK],0,300);
+  const c=spr(P(u,0,.7),6,9),br=1+.015*Math.sin(u*3);
+  g.save();g.translate(CX,700);g.scale(c*br,c*br);g.rotate((1-c)*-.4);g.shadowColor='rgba(0,0,0,.4)';g.shadowBlur=50;g.shadowOffsetY=24;g.fillStyle='#fff';rr(g,-400,-400,800,800,60);g.fill();g.shadowColor='transparent';
+  g.save();rr(g,-400,-400,800,800,60);g.clip();photo(g,1,-400,-400,800,800,1.04+.05*u/3,0,0);g.restore();g.restore();
+  big(g,'Hellurei',CX,1240,PAPER,u-.3,{size:230,fit:900,gap:.05});
+  const pu=spr(P(u,.9,.5),7,10);if(pu>0){const w=640*pu;g.fillStyle=rgb(SUN);rr(g,CX-w/2,1350,w,130,65);g.fill();
+    if(pu>.6)T(g,'hellurei.fi',F(900,76),CX,1440,INK,1);
+    const sw=P(u,1.6,.7);if(sw>0&&sw<1){g.save();rr(g,CX-w/2,1350,w,130,65);g.clip();g.fillStyle='rgba(255,255,255,.6)';g.save();g.translate(lp(CX-400,CX+400,sw),1415);g.rotate(.4);g.fillRect(-25,-120,50,240);g.restore();g.restore()}}
+  const a=ex(P(u,1.2,.5));T(g,'Hae: Montessori-kiipeilykolmio luiskalla',F(800,42),CX,1570+(1-a)*40,PAPER,a);
+  T(g,'Sopii 12 kk:sta alkaen aikuisen valvonnassa',F(600,34),CX,1650,MUTE,ex(P(u,1.5,.5)))};
+
+window.ready=(async()=>{await Promise.all([loadImgs,fonts]);
+K.start({duration:15,hud:{show:false},fade:{in:.04,out:.4},
+ shots:[[0,.5,word3('KIIPEÄ',ACC,PAPER,SUN),{bloom:.12}],[.5,1,word3('LIUKUU',SKY,INK,PAPER),{bloom:.12}],[1,1.5,word3('LEIKI',SUN,INK,ACC),{bloom:.1}],
+  [1.5,4,sHero,{bloom:.2}],[4,6,sRungs,{bloom:.1}],[6,8,sSlope,{bloom:.1}],[8,10,sFold,{bloom:.45}],[10,12,sGrid,{bloom:.1}],[12,15.01,sEnd,{bloom:.4}]],
+ hits:[[0,1],[.5,1],[1,1],[1.5,1.2,10],[3,.5],[4,1],[5,.5],[6,1],[7,.5],[8,1],[9,.5],[10,1],[11,.5],[12,1.4,22],[13.5,.4]]});
+return window.ready})();
+</script></body></html>
