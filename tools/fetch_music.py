@@ -26,11 +26,11 @@ for p in pages:
     if src in have: continue
     try: t = get(src).decode('utf8', 'ignore')
     except Exception as e: print('skip', p, e); continue
-    if not re.search(r'CC0', t): print('not CC0', p); LOG.append((a,p,len(t),re.findall(r'(?:mp3|ogg)[^"<> ]{0,80}',t)[:3])); continue
+    if not re.search(r'CC0', t): print('not CC0', p); LOG.append((p,len(t),re.findall(r'(?:mp3|ogg)[^"<> ]{0,80}',t)[:3])); continue
     title = html.unescape((re.search(r'<title>(.*?)\|', t, re.S) or [0, p])[1]).strip()
     auth = (re.search(r'/users/[^"]+"[^>]*>([^<]+)<', t) or [0, '?'])[1]
     files = re.findall(r'href="(https://opengameart.org/sites/default/files/[^"]+\.(?:mp3|ogg|wav))"', t)
-    if not files: print('no file', p); LOG.append((a,p,len(t),re.findall(r'(?:mp3|ogg)[^"<> ]{0,80}',t)[:3])); continue
+    if not files: print('no file', p); LOG.append((p,len(t),re.findall(r'(?:mp3|ogg)[^"<> ]{0,80}',t)[:3])); continue
     f = sorted(files, key=lambda x: (not x.endswith('.mp3'), len(x)))[0]; name = re.sub(r'[^a-z0-9]+', '-', p.split('/')[-1])[:50]
     raw = f'{OUT}/{name}.src'; mp3 = f'{OUT}/{name}.mp3'
     try: open(raw, 'wb').write(get(f.replace(' ', '%20')))
