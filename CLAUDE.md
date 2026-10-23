@@ -68,3 +68,6 @@ Order matters: build videos and push them BEFORE creating Buffer posts that poin
 - Do not claim "our favourite", discounts, shipping. A first caption did, and it was removed.
 - The workspace network is allowlisted; if a download fails, do it in a GitHub Actions workflow in this repo instead of retrying.
 - Videos: render with sub-pixel transforms (canvas drawImage float coordinates), never integer-cropped Pillow frames (causes shaking).
+
+## 9. Music library status (24.10.2026)
+music/catalog.json holds 40 CC0 tracks from OpenGameArt (73 MB), mostly game music (dark, ambient, battle). Only a few fit a cheerful kids' shop: "Bossa Nova" (Joth), "Next to You" (Joth), "Enchanted Tiki 86" (cynicmusic), "Town Theme RPG" (cynicmusic), "Snowfall" (Kistol, calm/Christmas), "4 Chiptunes (Adventure)" (Juhani Junkala), "Awake! (Megawall-10)" (cynicmusic). Do not use dark, creepy, battle or ambient horror tracks. The built-in synthesizer (tools/musicgen.py) is the default and matches the approved video; use a CC0 file only when it clearly fits. Extend the library by editing tools/fetch_music.py (push triggers the workflow; it runs ~25 min).
