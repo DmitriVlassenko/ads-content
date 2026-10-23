@@ -1,0 +1,32 @@
+name: Fetch picked images
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'picks/*.txt'
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download picks (width 1400)
+        run: |
+          mkdir -p picks/img
+          for f in picks/*.txt; do
+            while read -r name url; do
+              [ -z "$name" ] && continue
+              [ -f "picks/img/$name.jpg" ] && continue
+              sep='?'; case "$url" in *\?*) sep='&';; esac
+              curl -sSL --retry 3 -A "Mozilla/5.0 hellurei-content-bot" -o "picks/img/$name.jpg" "${url}${sep}width=1400" || echo "failed $name"
+            done < "$f"
+          done
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add picks/img
+          git diff --cached --quiet || git commit -m "Add picked images"
+          git pull --rebase origin main
+          git push origin main
