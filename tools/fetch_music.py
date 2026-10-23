@@ -6,11 +6,12 @@ import json, os, re, subprocess, time, urllib.request, html, zipfile, io
 UA = {'User-Agent': 'Mozilla/5.0 hellurei-content-bot'}
 OUT = 'music/cc0'; os.makedirs(OUT, exist_ok=True)
 cat = json.load(open('music/catalog.json')) if os.path.exists('music/catalog.json') else []
-have = {c['source'] for c in cat}; LOG = []
+LOG = []
+have = {c['source'] for c in cat}
 def get(u): return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read()
 def dur(p):
-    try: return float(subprocess.check_output(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', p]).decode().strip())
-    except Exception: return 0
+    try: return float(subprocess.check_output(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=nk=1:nw=1', p], stderr=subprocess.STDOUT).decode().strip().split()[-1])
+    except Exception as e: LOG.append(f'probe fail {p} {e}'); return 0
 pages = []
 for pg in range(0, 8):
     u = f'https://opengameart.org/art-search-advanced?keys=&field_art_type_tid%5B%5D=12&field_art_licenses_tid%5B%5D=4&sort_by=count&sort_order=DESC&page={pg}'
@@ -25,7 +26,7 @@ def add(raw, name, title, auth, src):
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', raw, '-vn', '-ac', '2', '-ar', '44100', '-b:a', '128k', mp3])
     if os.path.exists(mp3): cat.append({'file': mp3, 'title': title, 'author': auth, 'source': src, 'license': 'CC0', 'seconds': round(d, 1)}); LOG.append(f'ok {title} {round(d)}')
 for p in pages:
-    if len(cat) >= 40: break
+    if len(cat) >= 40 or len(LOG) > 400: break
     src = 'https://opengameart.org' + p
     if src in have: continue
     try: t = get(src).decode('utf8', 'ignore')
@@ -43,9 +44,9 @@ for p in pages:
                 z = zipfile.ZipFile(io.BytesIO(data)); n = 0
                 for nm in z.namelist():
                     if nm.lower().endswith(('.mp3', '.ogg', '.wav')) and n < 3 and len(cat) < 40:
-                        raw = f'{OUT}/tmp_{n}.src'; open(raw, 'wb').write(z.read(nm)); add(raw, f'{base}-{n}', f'{title} / {os.path.basename(nm)}', auth, src); os.remove(raw); n += 1
+                        raw = f'{OUT}/tmp_{n}' + os.path.splitext(nm)[1].lower(); open(raw, 'wb').write(z.read(nm)); add(raw, f'{base}-{n}', f'{title} / {os.path.basename(nm)}', auth, src); os.remove(raw); n += 1
             else:
-                raw = f'{OUT}/tmp.src'; open(raw, 'wb').write(data); add(raw, base, title, auth, src); os.remove(raw)
+                raw = f'{OUT}/tmp' + os.path.splitext(f)[1].lower(); open(raw, 'wb').write(data); add(raw, base, title, auth, src); os.remove(raw)
     except Exception as e: LOG.append(f'fail {p} {e}')
     time.sleep(1)
 open('music/fetch_log.txt', 'w').write('\n'.join(LOG))
