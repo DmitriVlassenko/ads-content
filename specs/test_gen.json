@@ -1,0 +1,61 @@
+{
+ "id": "test_gen",
+ "seed": 7,
+ "photos": {
+  "a": "picks/img/triangle_3.jpg",
+  "b": "picks/img/triangle_5.jpg",
+  "c": "picks/img/triangle_6.jpg",
+  "d": "picks/img/triangle_4.jpg",
+  "e": "picks/img/triangle_1.jpg"
+ },
+ "scenes": [
+  {
+   "type": "strobe",
+   "words": [
+    "PIENI",
+    "SUURI",
+    "LEIKKI"
+   ]
+  },
+  {
+   "type": "hero",
+   "photo": "a",
+   "l1": "Kiipeilykolmio",
+   "l2": "luiskalla",
+   "sub": "Montessori-henkinen kiipeily kotona"
+  },
+  {
+   "type": "text",
+   "lines": [
+    "TAITTUU",
+    "LITTEÄKSI"
+   ],
+   "photo": "d"
+  },
+  {
+   "type": "counter",
+   "photo": "b",
+   "n": 8,
+   "word": "tankoa",
+   "l2": "joka puolella",
+   "foot": "Ote ja jalkavoima kehittyvät"
+  },
+  {
+   "type": "grid",
+   "photos": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "l1": "Montessori-henkinen",
+   "l2": "kiipeily kotona"
+  },
+  {
+   "type": "end",
+   "photo": "e",
+   "search": "Hae: Montessori-kiipeilykolmio luiskalla",
+   "note": "Sopii 12 kk:sta alkaen aikuisen valvonnassa"
+  }
+ ]
+}
