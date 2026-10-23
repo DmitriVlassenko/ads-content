@@ -1,1 +1,322 @@
-[]
+[
+ {
+  "file": "music/cc0/5-chiptunes-action-0.mp3",
+  "title": "5 Chiptunes (Action) / Juhani Junkala [Retro Game Music Pack] Ending.wav",
+  "author": "SubspaceAudio",
+  "source": "https://opengameart.org/content/5-chiptunes-action",
+  "license": "CC0",
+  "seconds": 44.7
+ },
+ {
+  "file": "music/cc0/5-chiptunes-action-1.mp3",
+  "title": "5 Chiptunes (Action) / Juhani Junkala [Retro Game Music Pack] Level 1.wav",
+  "author": "SubspaceAudio",
+  "source": "https://opengameart.org/content/5-chiptunes-action",
+  "license": "CC0",
+  "seconds": 74.3
+ },
+ {
+  "file": "music/cc0/5-chiptunes-action-2.mp3",
+  "title": "5 Chiptunes (Action) / Juhani Junkala [Retro Game Music Pack] Level 2.wav",
+  "author": "SubspaceAudio",
+  "source": "https://opengameart.org/content/5-chiptunes-action",
+  "license": "CC0",
+  "seconds": 72.8
+ },
+ {
+  "file": "music/cc0/crystal-cave-song18.mp3",
+  "title": "Crystal Cave (song18)",
+  "author": "cynicmusic",
+  "source": "https://opengameart.org/content/crystal-cave-song18",
+  "license": "CC0",
+  "seconds": 49.6
+ },
+ {
+  "file": "music/cc0/battle-theme-a.mp3",
+  "title": "Battle Theme A",
+  "author": "cynicmusic",
+  "source": "https://opengameart.org/content/battle-theme-a",
+  "license": "CC0",
+  "seconds": 95.9
+ },
+ {
+  "file": "music/cc0/town-theme-rpg.mp3",
+  "title": "Town Theme RPG",
+  "author": "cynicmusic",
+  "source": "https://opengameart.org/content/town-theme-rpg",
+  "license": "CC0",
+  "seconds": 97.5
+ },
+ {
+  "file": "music/cc0/free-music-pack-0.mp3",
+  "title": "Free Music Pack / Alexander Ehlers - Doomed.mp3",
+  "author": "tricksntraps",
+  "source": "https://opengameart.org/content/free-music-pack",
+  "license": "CC0",
+  "seconds": 151.2
+ },
+ {
+  "file": "music/cc0/free-music-pack-1.mp3",
+  "title": "Free Music Pack / Alexander Ehlers - Flags.mp3",
+  "author": "tricksntraps",
+  "source": "https://opengameart.org/content/free-music-pack",
+  "license": "CC0",
+  "seconds": 98.6
+ },
+ {
+  "file": "music/cc0/free-music-pack-2.mp3",
+  "title": "Free Music Pack / Alexander Ehlers - Great mission.mp3",
+  "author": "tricksntraps",
+  "source": "https://opengameart.org/content/free-music-pack",
+  "license": "CC0",
+  "seconds": 118.5
+ },
+ {
+  "file": "music/cc0/the-field-of-dreams.mp3",
+  "title": "The Field Of Dreams",
+  "author": "pauliuw",
+  "source": "https://opengameart.org/content/the-field-of-dreams",
+  "license": "CC0",
+  "seconds": 84.6
+ },
+ {
+  "file": "music/cc0/menu-music.mp3",
+  "title": "Menu Music",
+  "author": "mrpoly",
+  "source": "https://opengameart.org/content/menu-music",
+  "license": "CC0",
+  "seconds": 47.7
+ },
+ {
+  "file": "music/cc0/cyberpunk-moonlight-sonata.mp3",
+  "title": "Cyberpunk Moonlight Sonata",
+  "author": "Joth",
+  "source": "https://opengameart.org/content/cyberpunk-moonlight-sonata",
+  "license": "CC0",
+  "seconds": 116.7
+ },
+ {
+  "file": "music/cc0/another-space-background-track-0.mp3",
+  "title": "Another space background track / ObservingTheStar.ogg",
+  "author": "yd",
+  "source": "https://opengameart.org/content/another-space-background-track",
+  "license": "CC0",
+  "seconds": 134.4
+ },
+ {
+  "file": "music/cc0/creepy-forest-f.mp3",
+  "title": "Creepy Forest (F)",
+  "author": "HaelDB",
+  "source": "https://opengameart.org/content/creepy-forest-f",
+  "license": "CC0",
+  "seconds": 216.0
+ },
+ {
+  "file": "music/cc0/4-chiptunes-adventure-0.mp3",
+  "title": "4 Chiptunes (Adventure) / Juhani Junkala [Chiptune Adventures] 1. Stage 1.ogg",
+  "author": "SubspaceAudio",
+  "source": "https://opengameart.org/content/4-chiptunes-adventure",
+  "license": "CC0",
+  "seconds": 41.1
+ },
+ {
+  "file": "music/cc0/4-chiptunes-adventure-1.mp3",
+  "title": "4 Chiptunes (Adventure) / Juhani Junkala [Chiptune Adventures] 2. Stage 2.ogg",
+  "author": "SubspaceAudio",
+  "source": "https://opengameart.org/content/4-chiptunes-adventure",
+  "license": "CC0",
+  "seconds": 56.1
+ },
+ {
+  "file": "music/cc0/4-chiptunes-adventure-2.mp3",
+  "title": "4 Chiptunes (Adventure) / Juhani Junkala [Chiptune Adventures] 3. Boss Fight.ogg",
+  "author": "SubspaceAudio",
+  "source": "https://opengameart.org/content/4-chiptunes-adventure",
+  "license": "CC0",
+  "seconds": 71.7
+ },
+ {
+  "file": "music/cc0/cave-theme.mp3",
+  "title": "Cave Theme",
+  "author": "HaelDB",
+  "source": "https://opengameart.org/content/cave-theme",
+  "license": "CC0",
+  "seconds": 280.0
+ },
+ {
+  "file": "music/cc0/bossa-nova.mp3",
+  "title": "Bossa Nova",
+  "author": "Joth",
+  "source": "https://opengameart.org/content/bossa-nova",
+  "license": "CC0",
+  "seconds": 59.6
+ },
+ {
+  "file": "music/cc0/rain-and-thunders.mp3",
+  "title": "rain and thunders",
+  "author": "kindland",
+  "source": "https://opengameart.org/content/rain-and-thunders",
+  "license": "CC0",
+  "seconds": 278.8
+ },
+ {
+  "file": "music/cc0/tragic-ambient-main-menu.mp3",
+  "title": "Tragic ambient main menu",
+  "author": "HaelDB",
+  "source": "https://opengameart.org/content/tragic-ambient-main-menu",
+  "license": "CC0",
+  "seconds": 100.0
+ },
+ {
+  "file": "music/cc0/enchanted-tiki-86.mp3",
+  "title": "Enchanted Tiki 86",
+  "author": "cynicmusic",
+  "source": "https://opengameart.org/content/enchanted-tiki-86",
+  "license": "CC0",
+  "seconds": 117.4
+ },
+ {
+  "file": "music/cc0/mysterious-ambience-song21.mp3",
+  "title": "Mysterious Ambience (song21)",
+  "author": "cynicmusic",
+  "source": "https://opengameart.org/content/mysterious-ambience-song21",
+  "license": "CC0",
+  "seconds": 42.9
+ },
+ {
+  "file": "music/cc0/background-space-track-0.mp3",
+  "title": "Background space track / MyVeryOwnDeadShip.ogg",
+  "author": "yd",
+  "source": "https://opengameart.org/content/background-space-track",
+  "license": "CC0",
+  "seconds": 226.3
+ },
+ {
+  "file": "music/cc0/next-to-you.mp3",
+  "title": "Next to You",
+  "author": "Joth",
+  "source": "https://opengameart.org/content/next-to-you",
+  "license": "CC0",
+  "seconds": 83.5
+ },
+ {
+  "file": "music/cc0/snowfall.mp3",
+  "title": "Snowfall",
+  "author": "Kistol",
+  "source": "https://opengameart.org/content/snowfall",
+  "license": "CC0",
+  "seconds": 49.5
+ },
+ {
+  "file": "music/cc0/awake-megawall-10.mp3",
+  "title": "Awake! (Megawall-10)",
+  "author": "cynicmusic",
+  "source": "https://opengameart.org/content/awake-megawall-10",
+  "license": "CC0",
+  "seconds": 57.4
+ },
+ {
+  "file": "music/cc0/boss-battle-music.mp3",
+  "title": "Boss Battle Music",
+  "author": "SubspaceAudio",
+  "source": "https://opengameart.org/content/boss-battle-music",
+  "license": "CC0",
+  "seconds": 123.4
+ },
+ {
+  "file": "music/cc0/forest-ambience.mp3",
+  "title": "Forest Ambience",
+  "author": "TinyWorlds",
+  "source": "https://opengameart.org/content/forest-ambience",
+  "license": "CC0",
+  "seconds": 44.8
+ },
+ {
+  "file": "music/cc0/forgoten-tomb-ambience.mp3",
+  "title": "Forgoten tomb ambience",
+  "author": "kindland",
+  "source": "https://opengameart.org/content/forgoten-tomb-ambience",
+  "license": "CC0",
+  "seconds": 214.2
+ },
+ {
+  "file": "music/cc0/medieval-the-old-tower-inn.mp3",
+  "title": "Medieval: The Old Tower Inn",
+  "author": "RandomMind",
+  "source": "https://opengameart.org/content/medieval-the-old-tower-inn",
+  "license": "CC0",
+  "seconds": 105.5
+ },
+ {
+  "file": "music/cc0/bleeding-out.mp3",
+  "title": "Bleeding out",
+  "author": "HaelDB",
+  "source": "https://opengameart.org/content/bleeding-out",
+  "license": "CC0",
+  "seconds": 159.3
+ },
+ {
+  "file": "music/cc0/underwater-theme.mp3",
+  "title": "Underwater Theme",
+  "author": "CleytonKauffman",
+  "source": "https://opengameart.org/content/underwater-theme",
+  "license": "CC0",
+  "seconds": 170.2
+ },
+ {
+  "file": "music/cc0/tower-defense-theme.mp3",
+  "title": "Tower Defense Theme",
+  "author": "DST",
+  "source": "https://opengameart.org/content/tower-defense-theme",
+  "license": "CC0",
+  "seconds": 199.4
+ },
+ {
+  "file": "music/cc0/desert-theme.mp3",
+  "title": "Desert theme",
+  "author": "yd",
+  "source": "https://opengameart.org/content/desert-theme",
+  "license": "CC0",
+  "seconds": 98.4
+ },
+ {
+  "file": "music/cc0/dungeon-ambience.mp3",
+  "title": "Dungeon Ambience",
+  "author": "yd",
+  "source": "https://opengameart.org/content/dungeon-ambience",
+  "license": "CC0",
+  "seconds": 206.0
+ },
+ {
+  "file": "music/cc0/vampires-piano.mp3",
+  "title": "Vampire's Piano",
+  "author": "TAD",
+  "source": "https://opengameart.org/content/vampires-piano",
+  "license": "CC0",
+  "seconds": 89.4
+ },
+ {
+  "file": "music/cc0/creepy.mp3",
+  "title": "Creepy",
+  "author": "TokyoGeisha",
+  "source": "https://opengameart.org/content/creepy",
+  "license": "CC0",
+  "seconds": 89.4
+ },
+ {
+  "file": "music/cc0/breves-dies-hominis.mp3",
+  "title": "Breves dies hominis",
+  "author": "ceninan",
+  "source": "https://opengameart.org/content/breves-dies-hominis",
+  "license": "CC0",
+  "seconds": 175.5
+ },
+ {
+  "file": "music/cc0/i-swear-i-saw-it-background-track.mp3",
+  "title": "I swear I saw it - background track",
+  "author": "yd",
+  "source": "https://opengameart.org/content/i-swear-i-saw-it-background-track",
+  "license": "CC0",
+  "seconds": 207.4
+ }
+]
