@@ -19,17 +19,18 @@ for pg in range(0, 6):
     pages += re.findall(r'href="(/content/[a-z0-9\-_]+)"', t); time.sleep(1)
 pages = list(dict.fromkeys(pages)); print('candidates', len(pages))
 open('music/fetch_log.txt','w').write('candidates %d\n%s\n' % (len(pages), t[:1500] if not pages else ''))
+LOG=[]
 for p in pages:
     if len(cat) >= 60: break
     src = 'https://opengameart.org' + p
     if src in have: continue
     try: t = get(src).decode('utf8', 'ignore')
     except Exception as e: print('skip', p, e); continue
-    if not re.search(r'CC0', t): print('not CC0', p); continue
+    if not re.search(r'CC0', t): print('not CC0', p); LOG.append((a,p,len(t),re.findall(r'(?:mp3|ogg)[^"<> ]{0,80}',t)[:3])); continue
     title = html.unescape((re.search(r'<title>(.*?)\|', t, re.S) or [0, p])[1]).strip()
     auth = (re.search(r'/users/[^"]+"[^>]*>([^<]+)<', t) or [0, '?'])[1]
     files = re.findall(r'href="(https://opengameart.org/sites/default/files/[^"]+\.(?:mp3|ogg|wav))"', t)
-    if not files: print('no file', p); continue
+    if not files: print('no file', p); LOG.append((a,p,len(t),re.findall(r'(?:mp3|ogg)[^"<> ]{0,80}',t)[:3])); continue
     f = sorted(files, key=lambda x: (not x.endswith('.mp3'), len(x)))[0]; name = re.sub(r'[^a-z0-9]+', '-', p.split('/')[-1])[:50]
     raw = f'{OUT}/{name}.src'; mp3 = f'{OUT}/{name}.mp3'
     try: open(raw, 'wb').write(get(f.replace(' ', '%20')))
@@ -38,4 +39,5 @@ for p in pages:
     if d < 40 or d > 400: os.remove(raw); print('length', p, d); continue
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', raw, '-ac', '2', '-ar', '44100', '-b:a', '160k', mp3]); os.remove(raw)
     cat.append({'file': mp3, 'title': title, 'author': auth, 'source': src, 'license': 'CC0', 'seconds': round(d, 1)}); print('ok', title, round(d)); time.sleep(1)
+open('music/fetch_log.txt','a').write('\n'.join(map(str,LOG[:6])))
 json.dump(cat, open('music/catalog.json', 'w'), ensure_ascii=False, indent=1)
