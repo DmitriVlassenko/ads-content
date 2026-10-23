@@ -18,6 +18,7 @@ for pg in range(0, 6):
     except Exception as e: print('list fail', pg, e); break
     pages += re.findall(r'href="(/content/[a-z0-9\-_]+)"', t); time.sleep(1)
 pages = list(dict.fromkeys(pages)); print('candidates', len(pages))
+open('music/fetch_log.txt','w').write('candidates %d\n%s\n' % (len(pages), t[:1500] if not pages else ''))
 for p in pages:
     if len(cat) >= 60: break
     src = 'https://opengameart.org' + p
