@@ -51,3 +51,4 @@ for p in pages:
     time.sleep(1)
 open('music/fetch_log.txt', 'w').write('\n'.join(LOG))
 json.dump(cat, open('music/catalog.json', 'w'), ensure_ascii=False, indent=1)
+# run
