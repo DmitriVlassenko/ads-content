@@ -77,3 +77,10 @@ music/catalog.json holds 40 CC0 tracks from OpenGameArt (73 MB), mostly game mus
 - Things others add that we do not have yet: (1) reference clips: ask the owner for example videos he likes, split with `ffmpeg -vf fps=1,scale=360:-1,tile=4x6` into a contact sheet and Read it, then copy pacing/type/layout; (2) paid generated assets via an OpenRouter key (voice-over, music, images, a second model as critic), about $3 per video; needs the owner's key and budget, not set up; (3) a storyboard per video before building, and a critic pass on the rendered sheets.
 - SAFE ZONES: Instagram/TikTok UI covers roughly the bottom 20% and the right edge. Keep important text between y=250 and y=1500 (of 1920), x<=960. Our end-card note lines (y 1570-1650) and foot texts (y 1855) are partly inside the unsafe zone: keep them short or move them up when you edit tools/template.html.
 - The first 5 s need a hook: the strobe words are our hook; make them a curiosity/benefit word, not a brand name.
+
+## 11. Ideas taken from public skill repos (reviewed 24.10.2026; nothing installed)
+Reviewed coreyhaines31/marketingskills (52 mostly B2B/SaaS skills, MIT) and blader/humanizer (MIT, 26 English AI-writing patterns). Decision: do not install (overlap with already installed social/SEO/copy skills, English-only patterns, unverified scripts). Distilled rules we adopt:
+- Video hook: give a visual hook, a text hook and a sound hit within the first second (our strobe words already do this). Keep on-screen text to 2 lines, 3-5 words per line; many people watch muted.
+- Plan content in 3-5 pillars (product play, tips, brand story, seasonal, video) and keep 1-2 weeks queued.
+- Caption style, avoid typical AI tells (also in Finnish): "ei vain X, vaan Y" constructions, rule-of-three lists in every post, one-line dramatic closers, inflated words ("ainutlaatuinen", "täydellinen", "mullistava"), emoji walls, identical sentence rhythm across posts. Prefer concrete details from the product page and a plain question or observation.
+- Never invent names, numbers or quotes (already a hard rule).
