@@ -84,3 +84,8 @@ Reviewed coreyhaines31/marketingskills (52 mostly B2B/SaaS skills, MIT) and blad
 - Plan content in 3-5 pillars (product play, tips, brand story, seasonal, video) and keep 1-2 weeks queued.
 - Caption style, avoid typical AI tells (also in Finnish): "ei vain X, vaan Y" constructions, rule-of-three lists in every post, one-line dramatic closers, inflated words ("ainutlaatuinen", "täydellinen", "mullistava"), emoji walls, identical sentence rhythm across posts. Prefer concrete details from the product page and a plain question or observation.
 - Never invent names, numbers or quotes (already a hard rule).
+
+## 12. Growth beyond posting (no budget) - decided 24.10.2026
+- No mass-following, no follow/unfollow, no fake "regular parent" posts in forums/groups (against platform rules, gets accounts banned). Never do these.
+- Free channel we do: Finnish buying guides on the store blog ("News" blog, gid://shopify/Blog/128681115988), facts only from product pages, link to the products. First guide created UNPUBLISHED 24.10.2026 (Article 624017211732, "Kiipeilykolmio lapselle: 7 asiaa..."), waiting for the owner's OK to publish. After approval: publish it, make a Pinterest pin pointing to it, and write further guides (about 1 per week, different products/categories, same format; each guide first as an unpublished draft until the owner has approved the first few).
+- Owner-run options (draft texts for him on request): creator outreach to small Finnish family creators, replies in parent forums under his own disclosed shop identity where rules allow, price-comparison site listings, email signup.
