@@ -53,11 +53,13 @@ def main():
                         f'[0:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=0.8,afade=t=in:d=0.3,afade=t=out:st={dur-1.2}:d=1.2[a];[a][1:a]amix=inputs=2:normalize=0,alimiter=limit=0.95', '-ac', '2', '-ar', '48000', wav], check=True)
         style = 'file:' + os.path.basename(f)
     else: style = make_music(wav, dur, bpm, cuts, [end_t], seed, m.get('style'), groove_from=first_groove)
+    cov = next((s for s in scenes if s['type'] in ('hero','card','counter','grid')), scenes[0]); cover_ms = int((cov['a'] + 1.0) * 1000)
+    open(P + '/cover_ms.txt', 'w').write(str(cover_ms)); print('COVER thumbnailOffset ms:', cover_ms)
     print(f'video {vid}: {dur}s, {len(scenes)} scenes, bpm {bpm}, music {style}, palette ok')
     B = os.path.join(HERE, 'kinetic/build.py')
     if mode == 'stills': subprocess.run([sys.executable, B, P, 'stills'], check=True); print('sheet:', P + '/stills_sheet.jpg'); return
     if mode == 'preview': subprocess.run([sys.executable, B, P, 'preview'], check=True); return
     subprocess.run([sys.executable, B, P, 'render', '--max-mb', '20'], check=True)
     os.makedirs(REPO + '/videos', exist_ok=True); shutil.copy(P + '/out.mp4', f'{REPO}/videos/{vid}.mp4'); shutil.copy(P + '/qa_sheet.jpg', f'{REPO}/build/{vid}_qa_sheet.jpg')
-    print('DONE videos/%s.mp4' % vid)
+    print('DONE videos/%s.mp4  (Buffer thumbnailOffset = %d ms)' % (vid, cover_ms))
 main()
