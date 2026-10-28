@@ -69,6 +69,9 @@ Order matters: build videos and push them BEFORE creating Buffer posts that poin
 - The workspace network is allowlisted; if a download fails, do it in a GitHub Actions workflow in this repo instead of retrying.
 - Videos: render with sub-pixel transforms (canvas drawImage float coordinates), never integer-cropped Pillow frames (causes shaking).
 
+- 28.10.2026: tools/makevideo.py passed make_music() the wrong positional args (seed went to end_t), so music generation looped for minutes (hang on some seeds). Fixed; stills now take ~15 s. The scheduled runs of 25.10 and 28.10 queued only photos and never wrote LOG.md: every run MUST make at least 2 videos (2 of every 7 IG/TikTok posts), render them in the background (run_in_background) and wait with an until-loop, push before posting. Check list_posts for assets of type video; if the queue has no videos, that is a failure to fix first. Videos go to BOTH IG (reel) and TikTok on different days. Local times: Buffer dueAt is UTC in listings; slots used are IG 12:00 or 19:30, TikTok 19:00 Helsinki.
+- Hero l1 text must be short (<=16 chars at default size); set s1 (e.g. 88) for longer titles. Card t2 now uses the foreground colour for contrast.
+
 ## 9. Music library status (24.10.2026)
 music/catalog.json holds 40 CC0 tracks from OpenGameArt (73 MB), mostly game music (dark, ambient, battle). Only a few fit a cheerful kids' shop: "Bossa Nova" (Joth), "Next to You" (Joth), "Enchanted Tiki 86" (cynicmusic), "Town Theme RPG" (cynicmusic), "Snowfall" (Kistol, calm/Christmas), "4 Chiptunes (Adventure)" (Juhani Junkala), "Awake! (Megawall-10)" (cynicmusic). Do not use dark, creepy, battle or ambient horror tracks. The built-in synthesizer (tools/musicgen.py) is the default and matches the approved video; use a CC0 file only when it clearly fits. Extend the library by editing tools/fetch_music.py (push triggers the workflow; it runs ~25 min).
 
