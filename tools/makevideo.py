@@ -47,12 +47,12 @@ def main():
     cuts = [s['a'] for s in scenes]; first_groove = next((s['a'] for s in scenes if s['type'] not in ('strobe',)), 0)
     m = sp.get('music', {}); wav = P + '/audio.wav'
     if m.get('file'):
-        make_music(P + '/fx.wav', dur, bpm, cuts, [end_t], seed, groove_from=first_groove, only_fx=True)
+        make_music(P + '/fx.wav', dur, bpm, cuts, [end_t], end_t, seed, groove_from=first_groove, only_fx=True)
         f = m['file'] if os.path.isabs(m['file']) else os.path.join(REPO, m['file']); ss = m.get('start', 0)
         subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-ss', str(ss), '-t', str(dur), '-i', f, '-i', P + '/fx.wav', '-filter_complex',
                         f'[0:a]aformat=sample_rates=48000:channel_layouts=stereo,volume=0.8,afade=t=in:d=0.3,afade=t=out:st={dur-1.2}:d=1.2[a];[a][1:a]amix=inputs=2:normalize=0,alimiter=limit=0.95', '-ac', '2', '-ar', '48000', wav], check=True)
         style = 'file:' + os.path.basename(f)
-    else: style = make_music(wav, dur, bpm, cuts, [end_t], seed, m.get('style'), groove_from=first_groove)
+    else: style = make_music(wav, dur, bpm, cuts, [end_t], end_t, seed, m.get('style'), groove_from=first_groove)
     cov = next((s for s in scenes if s['type'] in ('hero','card','counter','grid')), scenes[0]); cover_ms = int((cov['a'] + 1.0) * 1000)
     open(P + '/cover_ms.txt', 'w').write(str(cover_ms)); print('COVER thumbnailOffset ms:', cover_ms)
     print(f'video {vid}: {dur}s, {len(scenes)} scenes, bpm {bpm}, music {style}, palette ok')

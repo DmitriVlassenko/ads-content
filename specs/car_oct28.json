@@ -1,0 +1,8 @@
+{"id":"keinuauto_oct28","seed":2810,"photos":{"a":"picks/img/car1.jpg","b":"picks/img/car5.jpg","c":"picks/img/car9.jpg","d":"picks/img/car10.jpg","e":"picks/img/car11.jpg","f":"picks/img/car6.jpg"},
+"scenes":[
+{"type":"strobe","words":["HUH","HEI","VROOM"]},
+{"type":"hero","photo":"a","l1":"Pehmeä keinuauto","s1":88,"l2":"IGLU","sub":"Vaahtomuovia ja ekonahkaa","icon":false},
+{"type":"text","lines":["PEHMEÄ","KEINUU","KIITÄÄ"],"photo":"b"},
+{"type":"card","photo":"c","t1":"Tasapaino","t2":"harjoittuu","foot":"Keinuminen kehittää tasapainoa"},
+{"type":"grid","photos":["a","b","d","e"],"l1":"Käsintehty","l2":"pehmeä keinuauto"},
+{"type":"end","photo":"e","search":"Hae: IGLU keinuauto","note":"Noin 1 v:sta, aikuisen valvonnassa"}]}

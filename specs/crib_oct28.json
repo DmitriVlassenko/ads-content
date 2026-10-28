@@ -1,0 +1,8 @@
+{"id":"olin_oct28","seed":4417,"photos":{"a":"picks/img/crib1.jpg","b":"picks/img/crib6.jpg","c":"picks/img/crib7.jpg","d":"picks/img/crib9.jpg"},
+"scenes":[
+{"type":"strobe","words":["KEHTO","SÄNKY","PÄIVÄSÄNKY"]},
+{"type":"hero","photo":"a","l1":"Pyöreä OLIN","l2":"pyökkiä","sub":"Syntymästä noin 5 v.","icon":false},
+{"type":"counter","photo":"b","n":3,"word":"korkeutta","l2":"pohjassa","foot":"26,5 · 42,5 · 52 cm"},
+{"type":"text","lines":["SIVU","IRTI","PÄIVÄSÄNKY"],"photo":"c"},
+{"type":"card","photo":"d","t1":"Neljä pyörää","t2":"lukoilla","foot":"Vesipohjainen, myrkytön lakka"},
+{"type":"end","photo":"c","search":"Hae: OLIN-vauvansänky","note":"Täysi pyökki, 24 kk takuu"}]}

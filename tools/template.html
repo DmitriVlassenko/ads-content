@@ -58,7 +58,7 @@ SC.counter=S=>{const d=S.b-S.a,bg=C[S.v%5],fg=onC(bg);return (g,t,u)=>{fillAll(g
   if(S.l2)T(g,S.l2,F(800,70),700,1330,fg,ex(P(u,.55,.4)));
   for(let i=0;i<Math.min(S.n,8);i++){const q=stg(u,i,.055,.35);g.fillStyle=rgb(C[(i+1+S.v)%5]);rr(g,60,1520+i*42,(W-120)*q,26,13);g.fill()}
   if(S.foot)T(g,S.foot,F(800,46),CX,1880,fg,ex(P(u,1.0,.4)))}};
-SC.card=S=>{const d=S.b-S.a,bg=C[S.v%5],fg=onC(bg),acc=C[(S.v+2)%5];return (g,t,u)=>{fillAll(g,bg);
+SC.card=S=>{const d=S.b-S.a,bg=C[S.v%5],fg=onC(bg),acc=fg;return (g,t,u)=>{fillAll(g,bg);
   const sl=spr(P(u,0,.6),6,10);g.save();g.translate(CX,620);g.rotate(lp(S.v%2?.35:-.35,S.v%2?.05:-.05,sl));g.translate(0,(1-ex(P(u,0,.4)))*-800);
   g.shadowColor='rgba(0,0,0,.3)';g.shadowBlur=40;g.shadowOffsetY=24;g.fillStyle='#fff';rr(g,-450,-450,900,900,56);g.fill();g.shadowColor='transparent';
   g.save();rr(g,-450,-450,900,900,56);g.clip();photo(g,S.photo,-450,-450,900,900,lp(1.0,1.22,eio(P(u,0,d))),0,0);g.restore();g.restore();
