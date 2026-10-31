@@ -12,3 +12,11 @@
 2026-10-31 | TikTok video | IGLU rocking car video (keinuauto_oct28) | 6ae24e16317f77fea4154fd3 | scheduled 19:00
 2026-11-02 | IG reel | IGLU rocking car video | 6ae24e1aba9a64c57481c3c1 | scheduled 12:00
 2026-11-02 | TikTok video | OLIN crib video | 6ae24e1c787994b52278fc15 | scheduled 19:00
+2026-10-31 | NOTE | Scheduled run. Deleted errored IG post 6ae1ae3e46856e876544f553 (leg&go balance beams carousel, "issue with the media"; product still on Pinterest/TikTok). Made 2 new videos (torni_oct31, keinukaari_oct31). IG/TikTok queue now 9 each, 4 of them videos.
+2026-11-07 | IG reel | leg&go Securestep kitchen tower video (torni_oct31) | 6ae5a3dceaa24d6f9a62b2af | scheduled 19:30
+2026-11-08 | IG reel | The Sway rocking arch video (keinukaari_oct31) | 6ae5a3e0ceb491e585e57e3a | scheduled 12:00
+2026-11-07 | TikTok video | The Sway video | 6ae5a3e2b84259308bc60582 | scheduled 19:00
+2026-11-08 | TikTok video | Securestep tower video | 6ae5a3e4b84259308bc606df | scheduled 19:00
+2026-11-05 | Pinterest | Little Lights hedgehog lamp | 6ae5a3edb84259308bc60829 | scheduled 20:00
+2026-11-06 | Pinterest | leg&go Securestep tower | 6ae5a3f1b84259308bc608d9 | scheduled 12:30
+2026-11-06 | Pinterest | The Sway rocking arch | 6ae5a3f4ceb491e585e580bb | scheduled 20:00
