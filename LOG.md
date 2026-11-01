@@ -20,3 +20,10 @@
 2026-11-05 | Pinterest | Little Lights hedgehog lamp | 6ae5a3edb84259308bc60829 | scheduled 20:00
 2026-11-06 | Pinterest | leg&go Securestep tower | 6ae5a3f1b84259308bc608d9 | scheduled 12:30
 2026-11-06 | Pinterest | The Sway rocking arch | 6ae5a3f4ceb491e585e580bb | scheduled 20:00
+2026-11-01 | NOTE | Scheduled run. Queue already held 6 future videos in 16 IG/TikTok posts (above 2/7), 8 posts per channel. Made 1 new video (kuutio_nov01, CUBITRI climbing cube) and filled remaining slots to 10 per channel.
+2026-11-09 | IG reel | CUBITRI climbing cube video (kuutio_nov01) | IGID1 | scheduled 19:30
+2026-11-10 | TikTok video | CUBITRI climbing cube video | TTID1 | scheduled 19:00
+2026-11-10 | IG carousel | Montessori bookshelf (autumn reading) | 6ae6f41e21c807e9d5aa3900 | scheduled 12:00
+2026-11-09 | TikTok carousel | MIIMO step stool | 6ae6f41fab019b90874a3d7f | scheduled 19:00
+2026-11-09 | Pinterest | CUBITRI climbing cube | 6ae6f420f0984eef33542ec7 | scheduled 12:30
+2026-11-10 | Pinterest | MIIMO step stool | 6ae6f420cf3a3112f3e7ef96 | scheduled 20:00
