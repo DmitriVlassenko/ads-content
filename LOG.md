@@ -27,3 +27,13 @@
 2026-11-09 | TikTok carousel | MIIMO step stool | 6ae6f41fab019b90874a3d7f | scheduled 19:00
 2026-11-09 | Pinterest | CUBITRI climbing cube | 6ae6f420f0984eef33542ec7 | scheduled 12:30
 2026-11-10 | Pinterest | MIIMO step stool | 6ae6f420cf3a3112f3e7ef96 | scheduled 20:00
+2026-11-04 | NOTE | Scheduled run. Queue held 6 future videos in 14 IG/TikTok posts (7 per channel). Made 1 new video (kivet_nov04, Tipi balance stepping stones) and filled each channel to 10. No errored posts found.
+2026-11-11 | IG reel | Tipi balance stepping stones video (kivet_nov04) | 6aeae955dc38f4d7badf7348 | scheduled 19:30
+2026-11-12 | TikTok video | Tipi stepping stones video | 6aeae9562b43f8ba7d7ccd0f | scheduled 19:00
+2026-11-12 | IG carousel | leg&go wall-mounted drawing board (rainy day) | 6aeae957e478396c274e89e2 | scheduled 12:00
+2026-11-13 | IG carousel | Rabbit & Friends bird night lamp w/ Bluetooth speaker | 6aeae957dc38f4d7badf73e9 | scheduled 19:30
+2026-11-11 | TikTok carousel | Play tent for FIPITRI | 6aeae9582b43f8ba7d7ccd73 | scheduled 19:00
+2026-11-13 | TikTok carousel | leg&go drawing board | 6aeae959dc38f4d7badf7449 | scheduled 19:00
+2026-11-11 | Pinterest | Tipi balance stepping stones | 6aeae95a394911f9f129d71d | scheduled 12:30
+2026-11-11 | Pinterest | Bird night lamp | 6aeae95ad59713e43431e5b2 | scheduled 20:00
+2026-11-12 | Pinterest | Play tent for FIPITRI | 6aeae95be478396c274e8b47 | scheduled 12:30
