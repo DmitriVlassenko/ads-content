@@ -37,3 +37,14 @@
 2026-11-11 | Pinterest | Tipi balance stepping stones | 6aeae95a394911f9f129d71d | scheduled 12:30
 2026-11-11 | Pinterest | Bird night lamp | 6aeae95ad59713e43431e5b2 | scheduled 20:00
 2026-11-12 | Pinterest | Play tent for FIPITRI | 6aeae95be478396c274e8b47 | scheduled 12:30
+2026-11-07 | NOTE | Scheduled run. Queue held 8 future videos in 14 IG/TikTok posts (above 2/7), so no new videos rendered. Added 3 IG + 3 TikTok + 4 Pinterest. Old errored IG post 6ae1ae5f3ca4e5ab3b2eb140 (IGLU banana, 5.11) could not be deleted (delete_post blocked by permission check); owner may delete it in Buffer.
+2026-11-14 | IG carousel | Cloud Lamb Duo bean bag | 6aeedd20d6bbae6fa1733339 | scheduled 19:30
+2026-11-15 | IG carousel | IGLU ball pit 120x120 | 6aeedd20d6bbae6fa1733380 | scheduled 12:00
+2026-11-16 | IG carousel | leg&go wooden baby gym | 6aeedd21a7751de7c9d4a3bf | scheduled 19:30
+2026-11-14 | TikTok carousel | IGLU ball pit | 6aeedd3c229bf05daf3803f1 | scheduled 19:00
+2026-11-15 | TikTok carousel | Little Lights T-rex lamp | 6aeedd3daf7e526d430b8960 | scheduled 19:00
+2026-11-16 | TikTok carousel | Cloud Lamb Duo bean bag | 6aeedd3e9214322f68dae763 | scheduled 19:00
+2026-11-12 | Pinterest | Little Lights T-rex lamp | 6aeedd3eaf7e526d430b899e | scheduled 20:00
+2026-11-13 | Pinterest | leg&go wooden baby gym | 6aeedd3ea7751de7c9d4a913 | scheduled 12:30
+2026-11-13 | Pinterest | Cloud Lamb Duo bean bag | 6aeedd3f9214322f68dae7c0 | scheduled 20:00
+2026-11-14 | Pinterest | IGLU ball pit | 6aeedd40229bf05daf3804cb | scheduled 12:30
