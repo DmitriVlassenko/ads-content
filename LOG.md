@@ -48,3 +48,12 @@
 2026-11-13 | Pinterest | leg&go wooden baby gym | 6aeedd3ea7751de7c9d4a913 | scheduled 12:30
 2026-11-13 | Pinterest | Cloud Lamb Duo bean bag | 6aeedd3f9214322f68dae7c0 | scheduled 20:00
 2026-11-14 | Pinterest | IGLU ball pit | 6aeedd40229bf05daf3804cb | scheduled 12:30
+2026-11-10 | NOTE | Scheduled run. Queue held 3 future videos in 14 IG/TikTok posts (below 2/7). Made 2 new videos (torni_nov10 STEP'n'FOLD, palkki_nov10 TipiToo) and filled channels. Errored IG post 6ae1ae5f3ca4e5ab3b2eb140 (IGLU banana) still in Buffer, owner may delete it.
+2026-11-17 | IG reel | STEP'n'FOLD tower video (torni_nov10) | 6af2d322e261c09accacbeda | scheduled 19:30
+2026-11-19 | IG reel | TipiToo balance beam video (palkki_nov10) | 6af2d3231586e43ae33c591c | scheduled 19:30
+2026-11-17 | TikTok video | TipiToo video | 6af2d324e261c09accacbf47 | scheduled 19:00
+2026-11-18 | TikTok video | STEP'n'FOLD video | 6af2d324e261c09accacbf7a | scheduled 19:00
+2026-11-18 | IG carousel | Kinderkraft 4Smart playmat | 6af2d32605af22d726174b38 | scheduled 12:00
+2026-11-19 | TikTok carousel | Kinderkraft 4Smart playmat | 6af2d32605af22d726174b76 | scheduled 19:00
+2026-11-15 | Pinterest | STEP'n'FOLD tower | 6af2d32705af22d726174be8 | scheduled 12:30
+2026-11-15 | Pinterest | TipiToo balance beam | 6af2d32826f9e6aeeaf3c3be | scheduled 20:00
