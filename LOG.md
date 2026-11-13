@@ -57,3 +57,14 @@
 2026-11-19 | TikTok carousel | Kinderkraft 4Smart playmat | 6af2d32605af22d726174b76 | scheduled 19:00
 2026-11-15 | Pinterest | STEP'n'FOLD tower | 6af2d32705af22d726174be8 | scheduled 12:30
 2026-11-15 | Pinterest | TipiToo balance beam | 6af2d32826f9e6aeeaf3c3be | scheduled 20:00
+2026-11-13 | NOTE | Scheduled run. Queue held 4 future videos in 14 IG/TikTok posts (exactly 2/7); made 2 new videos (surf_nov13 leg&go Surf Rider, tuoli_nov13 IGLU rocking chair), no render errors. Deleted 3 errored IG carousels (banana 5.11, bookshelf 10.11, drawing board 12.11; all "issue with the media", Shopify-CDN carousels). Cloud Lamb/ball pit/baby gym/bird lamp IG carousels (Shopify CDN) still scheduled, watch for the same error.
+2026-11-20 | IG reel | Surf Rider video (surf_nov13) | 6af6c7df3890f6d4a9ca071a | scheduled 19:30
+2026-11-21 | IG carousel | IGLU tunnel set | 6af6c7e03890f6d4a9ca0755 | scheduled 12:00
+2026-11-22 | IG reel | IGLU rocking chair video (tuoli_nov13) | 6af6c7e16bb977bd3df0ed02 | scheduled 19:30
+2026-11-20 | TikTok video | IGLU rocking chair video | 6af6c7e1cf5e7843507f22af | scheduled 19:00
+2026-11-21 | TikTok carousel | Little Lights penguin lamp | 6af6c7e26bb977bd3df0edd5 | scheduled 19:00
+2026-11-22 | TikTok video | Surf Rider video | 6af6c7e3fb90ccefdd2b590e | scheduled 19:00
+2026-11-16 | Pinterest | Little Lights penguin lamp | 6af6c7f1cf5e7843507f2987 | scheduled 12:30
+2026-11-16 | Pinterest | Surf Rider | 6af6c7f16bb977bd3df0f360 | scheduled 20:00
+2026-11-17 | Pinterest | IGLU tunnel set | 6af6c7f25ec1c9d5be6d06f0 | scheduled 12:30
+2026-11-17 | Pinterest | IGLU rocking chair | 6af6c7f3cf5e7843507f29be | scheduled 20:00
