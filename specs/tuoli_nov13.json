@@ -1,0 +1,8 @@
+{"id":"tuoli_nov13","seed":2024,"palette":1,"bpm":92,"photos":{"a":"picks/img/chair1.jpg","b":"picks/img/chair2.jpg","c":"picks/img/chair7.jpg","d":"picks/img/chair9.jpg","e":"picks/img/chair1.jpg"},
+"scenes":[{"type":"strobe","words":["LUKUHETKI","KEINUU"]},
+{"type":"hero","photo":"a","l1":"Keinutuoli","l2":"IGLU","sub":"Lukunurkkaan, vihreänä","icon":false},
+{"type":"card","photo":"b","t1":"Pehmeä","t2":"ja kevyt","foot":"Pyyhitään kostealla liinalla"},
+{"type":"counter","photo":"c","n":3,"word":"-7 vuotta","foot":"Koko 60 × 60 cm"},
+{"type":"text","lines":["KIRJA","SYLISSÄ","KEINUU"],"photo":"d"},
+{"type":"end","photo":"e","search":"Hae: IGLU keinutuoli","note":"Valmistettu Latviassa"}],
+"music":{"style":"dreamy"}}

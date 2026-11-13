@@ -1,0 +1,8 @@
+{"id":"surf_nov13","seed":1313,"palette":4,"bpm":116,"photos":{"a":"picks/img/surf2.jpg","b":"picks/img/surf6.jpg","c":"picks/img/surf8.jpg","d":"picks/img/surf9.jpg","e":"picks/img/surf3.jpg"},
+"scenes":[{"type":"strobe","words":["LIUKUU","KIERTÄÄ","PYÖRII"]},
+{"type":"hero","photo":"a","l1":"Surffaa lattialla","s1":80,"l2":"Surf Rider","sub":"leg&go-ajolelu","icon":false},
+{"type":"counter","photo":"b","n":4,"word":"pyörää","foot":"Kumipinnoitetut, ei naarmuta"},
+{"type":"card","photo":"c","t1":"Tasapaino","t2":"ja keskivartalo","foot":"Noin 2 vuodesta alkaen"},
+{"type":"text","lines":["55 × 25 cm","KEVYT","KANTAA ITSE"],"photo":"d"},
+{"type":"end","photo":"e","search":"Hae: leg&go Surf Rider","note":"Aikuisen valvonnassa"}],
+"music":{"style":"bouncy"}}
