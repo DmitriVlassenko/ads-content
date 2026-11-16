@@ -68,3 +68,15 @@
 2026-11-16 | Pinterest | Surf Rider | 6af6c7f16bb977bd3df0f360 | scheduled 20:00
 2026-11-17 | Pinterest | IGLU tunnel set | 6af6c7f25ec1c9d5be6d06f0 | scheduled 12:30
 2026-11-17 | Pinterest | IGLU rocking chair | 6af6c7f3cf5e7843507f29be | scheduled 20:00
+2026-11-16 | NOTE | Scheduled run. add_repo tool not available in this session; used the existing clone (pull/push worked). Queue held 8 future videos in 14 IG/TikTok posts (above 2/7), so no new videos rendered. Deleted 2 errored IG Shopify-CDN carousels (bird lamp 13.11, ball pit 15.11). New IG carousels use images hosted in picks/img (raw GitHub) instead of Shopify CDN; watch whether they publish OK. Luula chair IG carousel skipped (3:4 images fail IG ratio), used on Pinterest/TikTok.
+2026-11-23 | IG carousel | Montessori climbing arch | 6afabb43ff465c57dae2d028 | scheduled 12:00
+2026-11-24 | IG carousel | leg&go Lumo soft blocks | 6afabb44ff465c57dae2d04e | scheduled 19:30
+2026-11-25 | IG carousel | Little Lights flamingo lamp | 6afabb448e87c256a3c1c22a | scheduled 12:00
+2026-11-23 | TikTok carousel | Little Lights flamingo lamp | 6afabb4560a910801c7be0d6 | scheduled 19:00
+2026-11-24 | TikTok carousel | Montessori climbing arch | 6afabb46a869c35e5bcab660 | scheduled 19:00
+2026-11-25 | TikTok carousel | Luula adjustable chair | 6afabb46ff465c57dae2d158 | scheduled 19:00
+2026-11-18 | Pinterest | Luula adjustable chair | 6afabb1b06e1675856d85b49 | scheduled 12:30
+2026-11-18 | Pinterest | Victor kids desk | 6afabb1c06e1675856d85c83 | scheduled 20:00
+2026-11-19 | Pinterest | leg&go Lumo soft blocks | 6afabb1c8e87c256a3c1b34b | scheduled 12:30
+2026-11-20 | Pinterest | Montessori climbing arch | 6afabb1d60a910801c7bd3e1 | scheduled 20:00
+2026-11-21 | Pinterest | Little Lights flamingo lamp | 6afabb1ed7e5fee638aef5da | scheduled 12:30
